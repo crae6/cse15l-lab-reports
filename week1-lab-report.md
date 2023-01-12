@@ -5,6 +5,8 @@
 
 * Then, reset your course-specific password and press enter instead of pressing "Check Password". (Checking password will provide and error)
 
+* I had some trouble on this portion, one thing that I figured out is that when you login to change your password, use your school account, NOT the course-specific account. 
+
 ### **2. Install VSCode**
 
 * Go to [Visual Studio Code's website](https://code.visualstudio.com/) and install the version compatible with your computer.
@@ -51,3 +53,5 @@ Now you should be connected!!
 ### **5. Exiting Remote Access**
 
 * Finally, we can log out of the remote server by typing "exit" or pressing Ctrl-D.
+
+* Hopefully this tutorial worked for you and you're all set for working in CSE15L!
