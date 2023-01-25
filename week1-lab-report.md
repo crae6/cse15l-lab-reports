@@ -33,7 +33,6 @@ because this is your first time connecting to this server you will get a message
 
 <img width="511" alt="Screen Shot 2023-01-12 at 11 27 21 AM" src="https://user-images.githubusercontent.com/122562172/212162519-492a5aa7-7ed7-47ad-987b-2e75312a10da.png">
 
----
 This message is normal for a first time login and you should just type "yes". 
 
 Next, you will be prompted to enter the password that you reset at the beginning of this tutorial. Once you have logged in, the following message should appear.
