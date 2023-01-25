@@ -5,6 +5,8 @@
 
 * Then, reset your course-specific password and press enter instead of pressing "Check Password". (Checking password will provide and error)
 
+  * Use this [link](https://docs.google.com/document/d/1hs7CyQeh-MdUfM9uv99i8tqfneos6Y8bDU0uhn1wqho/edit) for more detailed instructions.
+
 * I had some trouble on this portion, one thing that I figured out is that when you login to change your password, use your school account, NOT the course-specific account. 
 
 ### **2. Install VSCode**
@@ -22,7 +24,8 @@ If you are on Windows you will first need to install [Git for Windows](https://g
 Then, in VS code you will open a new terminal by using the taskbar at the top of the screen. 
 
 Next, we will enter the following commands into the terminal. 
-> $ ssh cs15lwi23zzz@ieng6.ucsd.edu 
+
+`$ ssh cs15lwi23zzz@ieng6.ucsd.edu` 
 
 The "zzz" will be replaced by the letters in your cse15l username and the $ is just how we write commands, it will not be included in our command. 
 
@@ -31,7 +34,9 @@ because this is your first time connecting to this server you will get a message
 <img width="511" alt="Screen Shot 2023-01-12 at 11 27 21 AM" src="https://user-images.githubusercontent.com/122562172/212162519-492a5aa7-7ed7-47ad-987b-2e75312a10da.png">
 This message is normal for a first time login and you should just type "yes". 
 
-Next, you will be prompted to enter the password that you reset at the beginning of this tutorial. Once you have logged in, the following message should appear.<img width="530" alt="Screen Shot 2023-01-12 at 10 32 51 AM" src="https://user-images.githubusercontent.com/122562172/212163216-906dd4db-4f18-4a07-a99e-28328bab80ee.png">
+Next, you will be prompted to enter the password that you reset at the beginning of this tutorial. Once you have logged in, the following message should appear.
+
+<img width="530" alt="Screen Shot 2023-01-12 at 10 32 51 AM" src="https://user-images.githubusercontent.com/122562172/212163216-906dd4db-4f18-4a07-a99e-28328bab80ee.png">
 
 Now you should be connected!!
 
@@ -41,14 +46,18 @@ Now you should be connected!!
 
 * Here are some useful commands: 
 
-  * cd ~
-  * cd
-  * ls -lat
-  * ls -a
-  * cp /home/linux/ieng6/cs15lwi23/public/hello.txt ~/
-  * cat /home/linux/ieng6/cs15lwi23/public/hello.txt
+  * `cd ~`
+  * `cd`
+  * `ls -lat`
+  * `ls -a`
+  * `cp /home/linux/ieng6/cs15lwi23/public/hello.txt ~/`
+  * `cat /home/linux/ieng6/cs15lwi23/public/hello.txt`
 
-* Here is an example of one command in use! <img width="407" alt="Screen Shot 2023-01-12 at 11 37 05 AM" src="https://user-images.githubusercontent.com/122562172/212164232-74a54989-6331-47e7-b1f1-81f2a89fd0d0.png">
+* Running these commands, I found it interesting that the commands work exactly as they do on our local server. The web server that we connected is still able to change directory, list information, copy files, and concatenate different files together. This will be very helpful when we are creating files collaboratively using our webserver and working on them on our local computers!
+
+* Here is an example of one command in use! 
+
+<img width="407" alt="Screen Shot 2023-01-12 at 11 37 05 AM" src="https://user-images.githubusercontent.com/122562172/212164232-74a54989-6331-47e7-b1f1-81f2a89fd0d0.png">
 
 ### **5. Exiting Remote Access**
 
