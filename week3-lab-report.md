@@ -38,17 +38,17 @@ class Handler implements URLHandler{
         }
     }
 }
-    class StringServer {
-        public static void main(String[] args) throws IOException {
-            if(args.length == 0){
-                System.out.println("Missing port number! Try any number between 1024 to 49151");
-                return;
-            }
-    
-            int port = Integer.parseInt(args[0]);
-    
-            Server.start(port, new Handler());
+class StringServer {
+    public static void main(String[] args) throws IOException {
+        if(args.length == 0){
+            System.out.println("Missing port number! Try any number between 1024 to 49151");
+            return;
         }
+    
+        int port = Integer.parseInt(args[0]);
+    
+        Server.start(port, new Handler());
+    }
 }
 ```
 
@@ -86,7 +86,7 @@ Examples of the server in use:
   assertArrayEquals(new int[]{1, 13, 9, 5, 3}, input2);
   ```
   
-* The array would then be `{1, 13, 9, 13, 1}` as shown below. 
+* The array would then be `{1, 13, 9, 13, 1}` and fail the test as shown below. 
 
 <img width="1019" alt="Screen Shot 2023-01-29 at 5 59 12 PM" src="https://user-images.githubusercontent.com/122562172/215372073-e1b6b9c4-30fd-455a-bc28-ad3d9d52bc5e.png">
 
