@@ -9,7 +9,48 @@
 
 * Here is the completed source code for this project: 
 
-<img width="845" alt="Screen Shot 2023-01-29 at 11 55 34 AM" src="https://user-images.githubusercontent.com/122562172/215352395-eb0715a9-fe9e-4369-9f76-68d9c3ac40f6.png">
+```
+import java.io.IOException;
+import java.net.URI;
+
+class Handler implements URLHandler{
+    
+    String stringsStored = "";
+    int num = 0;
+
+    public String handleRequest(URI url) {
+        if (url.getPath().equals("/")) {
+            return String.format("String Server");
+        } else {
+            if (url.getPath().contains("/add-message")) {
+                String[] parameters = url.getQuery().split("=");
+                if (parameters[0].equals("s")) {
+                    if (num == 0) {
+                        stringsStored = String.format("%s", parameters[1]);
+                    } else {
+                        stringsStored = String.format("%s%n%s",stringsStored, parameters[1]);
+                    }
+                    num++;
+                    return stringsStored;
+                }
+            }        
+            return String.format("404 Not found!");
+        }
+    }
+}
+    class StringServer {
+        public static void main(String[] args) throws IOException {
+            if(args.length == 0){
+                System.out.println("Missing port number! Try any number between 1024 to 49151");
+                return;
+            }
+    
+            int port = Integer.parseInt(args[0]);
+    
+            Server.start(port, new Handler());
+        }
+}
+```
 
 Examples of the server in use: 
 
@@ -35,7 +76,49 @@ Examples of the server in use:
 
 ### **2. Bugs from Lab 3**
 
-* 
+* `reverseInPlace()` is a method that had a bug. 
+
+* When the following junit test is run, the first half of the array is reversed, however the second half uses the same values as before the reverse. 
+  
+  ```
+  int[] input2 = {3, 5, 9, 13, 1};
+  ArrayExamples.reverseInPlace(input2);
+  assertArrayEquals(new int[]{1, 13, 9, 5, 3}, input2);
+  ```
+  
+* The array would then be `{1, 13, 9, 13, 1}` as shown below. 
+
+<img width="1019" alt="Screen Shot 2023-01-29 at 5 59 12 PM" src="https://user-images.githubusercontent.com/122562172/215372073-e1b6b9c4-30fd-455a-bc28-ad3d9d52bc5e.png">
+
+* But, we need to be careful when testing, because an input array such as `{1, 3, 3, 1}` would produce the correct output. Even though the code contains a bug. As shown below the test is passed. 
+
+<img width="554" alt="Screen Shot 2023-01-29 at 6 01 40 PM" src="https://user-images.githubusercontent.com/122562172/215372327-22467b5d-a5ed-49ae-8089-d3898e5f7ae4.png">
+
+* Here is the code before while it contains the bug: 
+
+```
+static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i++) {
+        arr[i] = arr[arr.length - i - 1];
+    }
+}
+```
+
+* In order to fix the method, we need to add a temporary array that will prevent the program from reversing the array while getting values from the array. 
+
+* Here is the fixed program without the bug. 
+
+```
+static void reverseInPlace(int[] arr) {
+    int[] temp = new int[arr.length];
+    for(int i = 0; i < arr.length; i++) {
+      temp[i] = arr[arr.length - i - 1];
+    }
+    for(int i = 0; i < arr.length; i++) {
+      arr[i] = temp[i];
+    }
+}
+```
 
 ### **3. What I've Learned**
 
