@@ -2,7 +2,7 @@
 ### The `find` Command
 
 #### All of these commands were discovered by asking ChatGPT in this prompt. 
-<img width="300" alt="Screen Shot 2023-03-09 at 11 10 44 AM" src="https://user-images.githubusercontent.com/122562172/224130058-19c12c5d-5aaa-4f41-a2d8-9b45f791d588.png">
+<img width="300" alt="Screen Shot 2023-03-09 at 1 07 46 PM" src="https://user-images.githubusercontent.com/122562172/224158171-07218978-2288-4ba5-a9c3-4aef2ef68f6c.png">
 <img width="300" alt="Screen Shot 2023-03-09 at 12 50 46 PM" src="https://user-images.githubusercontent.com/122562172/224154622-cfaeabbb-82b8-4fc0-94ba-9d6877b9c7ab.png">
 
 
