@@ -6,21 +6,20 @@
 
 #### 1. Finding by name using `-name`
 * `find . -name ch1.txt`
-  * This command returns <img width="427" alt="Screen Shot 2023-03-09 at 11 19 11 AM" src="https://user-images.githubusercontent.com/122562172/224131757-54f3b071-9897-42f5-b846-888e51f0b55e.png">
+  * This command returns <img width="900" alt="Screen Shot 2023-03-09 at 11 19 11 AM" src="https://user-images.githubusercontent.com/122562172/224131757-54f3b071-9897-42f5-b846-888e51f0b55e.png">
   * In this command, `-name` is used to search for the specified name in all directories and subdirectories of the current file. In this instance, there are five ch1.txt's found so all five of them are returned with their file path.  
 * `find . -name chZ.txt`
-  *  This command returns <img width="417" alt="Screen Shot 2023-03-09 at 11 22 45 AM" src="https://user-images.githubusercontent.com/122562172/224132534-c596264e-aeac-4fa5-a313-c30a0e5d1a31.png">
+  *  This command returns <img width="900" alt="Screen Shot 2023-03-09 at 11 22 45 AM" src="https://user-images.githubusercontent.com/122562172/224132534-c596264e-aeac-4fa5-a313-c30a0e5d1a31.png">
   *  In this command, `-name` is once again used to search for the file chZ.txt. However, this time there is only one file with the matched name, so only one is returned.
 * Researched using ChatGPT
 
-#### 2. Searching for multiple patterns using `-e`
-* `grep -e fickle -e Compaq non-fiction/OUP/Abernathy/*.txt`
-  * This command returns <img width="1114" alt="Screen Shot 2023-02-12 at 11 09 45 AM" src="https://user-images.githubusercontent.com/122562172/218331754-e0e1db84-d594-4c42-9615-0cc6bf21350b.png">
-  * In this command, the `-e` allows us to search for multiple patterns with one search. So, here we are searching for the strings "fickle" and "Compaq". When the command-line finds these strings, it returns the file they were found in and the line that it was found on. 
-* `grep -e emphasis -e 21-month-old non-fiction/OUP/Berk/*.txt`
-  * This command returns <img width="1115" alt="Screen Shot 2023-02-12 at 11 15 48 AM" src="https://user-images.githubusercontent.com/122562172/218332523-8ca29ae9-1db4-44a1-9f2f-527e7f04415a.png">
-  * In this command, we are once again using the `-e` command to search for multiple patterns. In this one, we search for the patterns "emphasis" and "21-month-old". The terminal then determines the lines that it finds that pattern on. 
-* Researched using ChatGPT
+#### 2. Finding files by type using `-type f -name`
+* `find . -type f -name "*.class"`
+  * This command returns <img width="900" alt="Screen Shot 2023-03-09 at 11 30 42 AM" src="https://user-images.githubusercontent.com/122562172/224134112-fc2a438f-c072-4015-a1d3-4d9c589030a1.png">
+  * In this command, `-type` specifies that we are searching for a type, `f` specifies that we only want to search for files, `-name` once again specifies that we are searching by name.
+* `find . -type f -name "*.sh"`
+  * This command returns <img width="900" alt="Screen Shot 2023-03-09 at 11 43 57 AM" src="https://user-images.githubusercontent.com/122562172/224136794-cd6a1354-09ff-41f9-9c23-d8103074d931.png">
+  * In this command, we are once again using `-type`, `f`, and `-name` however this time in the quotes we are specifying to only search for sh files by using `"*.sh"`.
 
 #### 3. Inverting the search results using `-v`
 * `grep -v and non-fiction/OUP/Fletcher/ch1.txt`
