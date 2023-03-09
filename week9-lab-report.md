@@ -44,9 +44,9 @@
 
 #### 5. Finding files and executing a command on them using `-exec`
 * `find . -name "chZ.txt" -exec cat {} \;`
-  * This command returns <img width="1130" alt="Screen Shot 2023-03-09 at 12 53 49 PM" src="https://user-images.githubusercontent.com/122562172/224155425-b2b4917a-6fdc-4587-a84c-749e88dfe4bb.png">
+  * This command returns <img width="900" alt="Screen Shot 2023-03-09 at 12 53 49 PM" src="https://user-images.githubusercontent.com/122562172/224155425-b2b4917a-6fdc-4587-a84c-749e88dfe4bb.png">
   * In this command, `-exec` tells the terminal that we are going to execute a command on the file(s) found. Then, `cat` prints out the contents of the file we have found. 
 * `find . -name "chZ.txt" -exec head {} \;`
-  * This command returns <img width="1076" alt="Screen Shot 2023-03-09 at 1 01 51 PM" src="https://user-images.githubusercontent.com/122562172/224157069-1362c591-016b-41db-9749-dfe944b11f62.png">
+  * This command returns <img width="900" alt="Screen Shot 2023-03-09 at 1 01 51 PM" src="https://user-images.githubusercontent.com/122562172/224157069-1362c591-016b-41db-9749-dfe944b11f62.png">
   * In this command, `-exec` tells the terminal that we are going to execute a command on the file(s) found. Then, `head` prints out the contents of the first ten lines of the file. 
  * Researched using ChatGPT
